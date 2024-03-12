@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+
+    <form style="position: absolute;top: 50%;left: 50%;transform: translate(-50% , -50%);">
+        <div>
+            <h1>Sign Up</h1>
+        </div>
+            <div class="name">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <br>
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <br>
+            
+            <div class="birthdate">
+                <label for="date">Birthdate</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+            <br>
+
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <br>
+
+            <div class="gender" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+            </div>
+            <br>
+
+            <div class="gender" id="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </div>
+            <br>
+
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        
+    </form>
+</body>
+</html>
+
