@@ -6,8 +6,16 @@
     <title>Sign Up</title>
 </head>
 <body>
-
-    <form style="position: absolute;top: 50%;left: 50%;transform: translate(-50% , -50%);background-color: #eee;padding: 25px;border: 1px solid #0000005c;border-radius: 15px " method="post">
+    <!-- <style>
+        body {
+    background-color:#15a6eb;
+    font-family: Sofia;
+    font-size: 20px;
+    color: rgba(18, 17, 19, 0.96);
+    text-align: center; 
+}
+</style> -->
+    <form style="position: absolute;top: 50%;left: 50%;transform: translate(-50% , -50%);background-color: #eee;padding: 25px;border: 1px solid #0000005c;border-radius: 15px">
         <div>
             <h1>Sign Up</h1>
         </div>
@@ -16,7 +24,6 @@
                 <input type="text" name="name" id="name" required>
             </div>
             <br>
-
             <div class="email">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" required>
@@ -48,9 +55,12 @@
             <br>
 
             <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-        
+            <button type="submit" name="is_admin"><a href="admin_page.html">Is_Admin</a></button>
+            <button type="submit" name="is_user"><a href="user_page.html">Is_User</a></button>
+            <br>
+            <hr>
+            <span>if you have an account?</span>
+            <a href="login.html" class="#">log in</a>
     </form>
 </body>
 </html>
-
