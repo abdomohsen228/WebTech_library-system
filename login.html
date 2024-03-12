@@ -3,19 +3,26 @@
 <head>
     <meta charset="utf - 8" />
 <body>
-   <form action="login.html">
+    <style>
+            body {
+        background-color: rgba(111, 73, 164, 0.946); 
+        font-family: Sofia;
+        font-size: 20px;
+        color: rgba(18, 17, 19, 0.96);
+        text-align: center; 
+    }
+    </style>
+    <form style="position: absolute;top: 50%;left: 50%;transform: translate(-50% , -50%);background-color: #eee;padding: 25px;border: 1px solid #0000005c;border-radius: 15px" action="login.html" method="post" >
 
     <div>
     <div>
         <label>Email Addres:</label>
-        <hr>
-        <input type="email" required placeholder="email" name="email">
+        <input type="email" required placeholder="email" name="email" >
         </div>
         <br>
         <div>
         <label>password:</label>
-        <hr>
-        <input type="password" required placeholder="password" name="password">
+        <input type="password" required placeholder="password" name="password" >
     </div>
         <br>
     <input type="submit" value="login ">
