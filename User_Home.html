@@ -1,26 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>User Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book library</title>
+    <meta name="title" content="library">
+    <meta name="description" content="Online Book library">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+    <link rel="stylesheet" href="user.css">
+
 
 </head>
 <body>
                     
-                    <center>        
-                                        <nav>
-                                        <a href="User_Home.html">Home</a>
-                                        <a href="userSearchBooks.html">Search</a>
-                                        <a href="userViewList.html">View List</a>
-                                        <a href="userSelectBook.html">Select a book</a>
-                                        <a href="userBorrowBook.html">Borrow Books</a>
-                                        <a href="userBookList.html">Your Book</a>
-                                        <a href="login.html">Log out</a>
-                                        </nav>
-                    </center>
-                    <center><h1>HOME</h1></center>
-                    <center><img src="wallpaperflare.com_wallpaper.jpg" alt=""></center>
+                    <header>    
+                        <div class="container">
+                            <a href="#" class="logo">
+                                <img decoding="async" src="imgs/Icon.png" alt="Logo" />
+                            </a>
+                            <nav>
+                                <i class="fas fa-bars toggle-menu"></i>
+                            <ul>
+                                <li><a class="active" href="User_Home.html">Home</a></li>
+                                <li><a href="userSearchBooks.html">Search</a></li>
+                                <li><a href="userViewList.html">View List</a></li>
+                                <li><a href="userSelectBook.html">Select a book</a></li>
+                                <li><a href="userBorrowBook.html">Borrow Books</a></li>
+                                <li><a href="userBookList.html">Your Book</a></li>
+                                <li><a href="login.html">Log out</a></li>
+                            </ul>
+                            <div class="form">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            </nav>
+                        </div>
+                    </header>
+                    
+                    <!-- <center><h1>HOME</h1></center> -->
+
+
+
+
+
+<!-- Start home-main -->
+
+    <div class="home-main">
+        <div class="overlay"></div>
+        <div class="text">
+          <div class="content">
+            <h2>
+                Welcome to Our Library!
+
+                  <br />
+                  Start your literary adventure today at [mohsen`s library]!"
+            </h2>
+            <p>
+                Explore a world of knowledge with our vast collection of books. 
+                From timeless classics to contemporary bestsellers, our library offers 
+                something for every reader. Whether you're seeking adventure, knowledge, 
+                or inspiration, our shelves are filled with stories waiting to be discovered.
+            </p>
+          </div>
+        </div>
+      </div>
+
+<!-- End home-main -->
+
+<!-- main content -->
+    <main>
+        <article>
+            <section class="section property" aria-labelledby="Property-label">
+                <div class="container">
+                    <div class="title-wrapper">
+                        <div>
+                            <h2 class="section-title headline-small">Best-selling books</h2>
+                            <p class="section-text body-large">Books in different fields are very popular on the Internet</p>
+                        </div>
+                        <a href="#" class="btn btn-outline">
+                            <span class="label-medium">Explore more</span>
+                            <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                        </a>
+                    </div>
+                    <div class="property-list">
+                            <div class="card">
+                                <div class="card-banner">
+                                    <figure class="img-holder" style="--width:250; --height:300;">
+                                        <img src="imgs/images.jpg" width="250" height="300" alt="Dear Life" class="img-cover">
+                                    </figure>
+                                    <button class="icon-btn fav-btn " aria-label="add to favorite">
+                                        <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <span class="author">Rachel Clarke</span>
+                                    <h3 class="title-small card-title">
+                                        <a href="#" class="title-small card-title">Dear Life</a>
+                                    </h3>
+                                    <address class="body-medium card-text">
+                                        
+                                        "Dear Life" offers a poignant exploration of human experience through a collection of short stories, delving into themes of love, loss, and resilience, all while reflecting on the complexities of existence and the passage of time. Alice Munro's masterful storytelling invites readers into the intimate lives of her characters, weaving together narratives that resonate with profound emotional depth and universal truths.
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-banner">
+                                    <figure class="img-holder" style="--width:250; --height:300;">
+                                        <img src="imgs\71FYHIsnVIL._AC_UF1000,1000_QL80_.jpg" width="250" height="300" alt="The Remains Of The Day" class="img-cover">
+                                    </figure>
+]                                    <button class="icon-btn fav-btn " aria-label="add to favorite">
+                                        <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <span class="author">Kazuo Ishiguro</span>
+                                    <h3 class="title-small card-title">
+                                        <a href="#" class="title-small card-title">The Remains Of The Day</a>
+                                    </h3>
+                                    <address class="body-medium card-text">
+                                        "The Remains of the Day" follows the journey of Stevens, an English butler, as he reflects on his life while on a road trip. Through his reminiscences, the novel explores themes of duty, regret, and the decline of the British aristocracy.
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-banner">
+                                    <figure class="img-holder" style="--width:250; --height:300;">
+                                        <img src="imgs\81-y8fgFTTL._AC_UF1000,1000_QL80_.jpg" width="250" height="300" alt="Tenth Of December" class="img-cover">
+                                    </figure>
+]                                    <button class="icon-btn fav-btn " aria-label="add to favorite">
+                                        <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <span class="author">George Saunders</span>
+                                    <h3 class="title-small card-title">
+                                        <a href="#" class="title-small card-title">Tenth Of December</a>
+                                    </h3>
+                                    <address class="body-medium card-text">
+                                        "Tenth of December" is a collection of short stories by George Saunders, exploring themes of humanity, morality, and the struggles of ordinary people in extraordinary circumstances, all with Saunders' signature blend of wit and compassion. Each story offers a poignant and often surreal glimpse into the human condition, prompting reflection on empathy, connection, and the complexities of modern life.
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-banner">
+                                    <figure class="img-holder" style="--width:250; --height:300;">
+                                        <img src="imgs\91NtvTU0xEL._AC_UF1000,1000_QL80_.jpg" width="250" height="300" alt="Things Fall Apart" class="img-cover">
+                                    </figure>
+]                                    <button class="icon-btn fav-btn " aria-label="add to favorite">
+                                        <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <span class="author">Chinua Achebe</span>
+                                    <h3 class="title-small card-title">
+                                        <a href="#" class="title-small card-title">Things Fall Apart</a>
+                                    </h3>
+                                    <address class="body-medium card-text">
+                                        "Things Fall Apart" is Chinua Achebe's seminal novel portraying the collision of African traditions and colonialism through the story of Okonkwo, a proud Igbo warrior whose life unravels amidst the forces of change, revealing the tragic consequences of cultural clash and personal hubris. Set in pre-colonial Nigeria, it explores themes of identity, power, and the fragility of human institutions, offering a poignant critique of colonialism and its impact on indigenous societies.
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-banner">
+                                    <figure class="img-holder" style="--width:250; --height:300;">
+                                        <img src="imgs\18342.png" width="250" height="300" alt="It" class="img-cover">
+                                    </figure>
+\                                    <button class="icon-btn fav-btn " aria-label="add to favorite">
+                                        <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <span class="author">Stephen King</span>
+                                    <h3 class="title-small card-title">
+                                        <a href="#" class="title-small card-title">It</a>
+                                    </h3>
+                                    <address class="body-medium card-text">
+                                        "It" by Stephen King is a chilling tale of a group of friends in Derry, Maine, confronting an ancient evil that takes the form of a malevolent clown, Pennywise, resurfacing every 27 years to terrorize the town. Through a mix of horror, nostalgia, and camaraderie, the novel delves into the characters' shared childhood traumas and their ultimate battle to overcome fear and destroy the monstrous entity.                            </address>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-banner">
+                                    <figure class="img-holder" style="--width:250; --height:300;">
+                                        <img src="imgs\662597.png" width="250" height="300" alt="Cut" class="img-cover">
+                                    </figure>
+                                    <button class="icon-btn fav-btn " aria-label="add to favorite">
+                                        <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <span class="author">Patricia mcCormick</span>
+                                    <h3 class="title-small card-title">
+                                        <a href="#" class="title-small card-title">Cut</a>
+                                    </h3>
+                                    <address class="body-medium card-text">
+                                        "Cut" by Patricia McCormick is a novel-in-verse depicting the struggles of a teenage girl named Callie who self-harms as she navigates the challenges of mental illness and treatment in a residential treatment facility. Through raw and lyrical language, the book explores themes of identity, trauma, and the journey towards self-discovery and healing.
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-banner">
+                                    <figure class="img-holder" style="--width:250; --height:300;">
+                                        <img src="imgs\15811545.jpg" width="250" height="300" alt="A Tale For The Time Being" class="img-cover">
+                                    </figure>
+                                    <button class="icon-btn fav-btn " aria-label="add to favorite">
+                                        <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <span class="author">Ruth Ozeki</span>
+                                    <h3 class="title-small card-title">
+                                        <a href="#" class="title-small card-title">A Tale For The Time Being</a>
+                                    </h3>
+                                    <address class="body-medium card-text">
+                                        A Tale for the Time Being" by Ruth Ozeki intertwines the stories of a Japanese girl's diary, washed ashore in Canada, and the woman who finds it, exploring themes of time, memory, and the interconnectedness of lives across vast distances. Through the parallel narratives, the novel delves into questions of identity, belonging, and the search for meaning in the face of loss and uncertainty.
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-banner">
+                                    <figure class="img-holder" style="--width:250; --height:300;">
+                                        <img src="imgs\Z.png" width="250" height="300" alt="Yellow Face" class="img-cover">
+                                    </figure>
+                                    <button class="icon-btn fav-btn " aria-label="add to favorite">
+                                        <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <span class="author">David Henry Hwang</span>
+                                    <h3 class="title-small card-title">
+                                        <a href="#" class="title-small card-title">Yellow Face</a>
+                                    </h3>
+                                    <address class="body-medium card-text">
+                                        "Yellow Face" by David Henry Hwang is a satirical play that blurs the lines between fact and fiction as it explores issues of race, identity, and cultural authenticity through the lens of a playwright's personal and professional journey. With humor and sharp insight, the play challenges stereotypes and prejudices while shedding light on the complexities of racial politics in contemporary America.
+                                    </address>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+
+
+            
+            </section>
+        </article>
+    </main>
+
+
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a>            <div class="contact-info">
+                    <p>Email: </p>
+                    <p>Phone: </p>
+                    <p>Address: </p>
+                    <p>Social Media:</p>
+                    <p>Twitter: </p>
+                    <p>Facebook: </p>
+                    <p>Instagram: </p>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
+    
+    
+
 
 </body>
 </html>
