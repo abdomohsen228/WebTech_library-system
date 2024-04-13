@@ -18,6 +18,7 @@ function chosing() {
     }
 }
 function emailExists(email) {
+    if(userObjects==[] || adminObjects==[])return false;
     for(let i=0;i<userObjects.length;i++){
         if(email.value==userObjects[i].email){
             return true;
@@ -32,14 +33,15 @@ function emailExists(email) {
 }
 
 // Function to check if username already exists
-function usernameExists(email) {
+function usernameExists(userName) {
+    if(userObjects==[] || adminObjects==[])return false;
     for(let i=0;i<userObjects.length;i++){
         if(userName.value==userObjects[i].userName){
             return true;
         }
     }
     for(let i=0;i<adminObjects.length;i++){
-        if(userName.value==userNameObjects[i].email){
+        if(userName.value==adminObjects[i].userName){
             return true;
         }
     } 
@@ -58,7 +60,8 @@ function check() {
 }
 
 // Creating objects for users and admins
-let userObjects = [];
+ let userObjects = [];
+
 let adminObjects = [];
 
 // Retrieving objects from localStorage
@@ -100,9 +103,10 @@ submit.onclick = function(event) {
         alert('Email already exists. Please choose a different username.');
         userName.value = '';
         password.value = '';
-        cpassword=password.value = '';
+        cpassword=cpassword.value = '';
         email.value = '';
         event.preventDefault();
+        return;
     }
     if(foundUser)
     {
@@ -110,19 +114,22 @@ submit.onclick = function(event) {
         alert('Username already exists. Please choose a different username.');
         userName.value = '';
         password.value = '';
-        cpassword=password.value = '';
+        cpassword=cpassword.value = '';
         email.value = '';
         event.preventDefault();
+        return;
     }
 
 
 
     // Add the object to the appropriate array and update localStorage
-    if (navigate == 'admin') {
+    foundUser=emailExists(userName);
+    foundMail=emailExists(email);
+    if (navigate == 'admin'  && foundUser == false && foundMail == false) {
         adminObjects.push(newObj);
         localStorage.setItem('admin', JSON.stringify(adminObjects));
         window.location.href = 'Admin_Home.html';
-    } else {
+    } else if(navigate == 'user' && foundUser==false && foundMail==false) {
         userObjects.push(newObj);
         localStorage.setItem('user', JSON.stringify(userObjects));
         window.location.href = 'User_Home.html';
