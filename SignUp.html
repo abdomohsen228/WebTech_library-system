@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>book store</title> 
-        <meta name="description "content=" this is our book store" />
-    </head>
+<head>
+    <meta charset="utf-8"/>
+    <title>book store</title>
+    <meta name="description" content="This is our book store" />
     <style>
-        body{
-            background-color: #efefef;
+        body {
+            background-color: #120069;
         }
         .container {
             width: 300px;
@@ -20,13 +19,14 @@
             border-style: solid;
             text-align: center;
             padding: 15px;
+            border-radius: 4ch;
             background-image: linear-gradient(270deg, #0f4392, #001d3d, #001d3d);
         }
-        input ,button,select{
+        input, button, select {
             margin: 5px;
             padding: 5px;
         }
-        input,select{
+        input, select {
             background-color: #efefef;
             border-color: #efefef;
             color: rgb(128, 128green, 128blue);
@@ -34,71 +34,43 @@
         input {
             width: 90%;
         }
-        select{
+        select {
             width: 94%;
         }
-        button{
+        button {
             background-color: rgb(204, 153, 154);
             color: black;
             width: 94%;
-
         }
-        a{
+        a {
             text-decoration: none;
             color: #7f7f7f;
-            
         }
-        
-
-        
-
     </style>
-    <body> 
-        <div class="container">
-        
+</head>
+<body> 
+    <div class="container">
         <h1 style="color: white;">REGISTER NOW</h1>
         <form>
-            
-            <input type="text "required  placeholder="Username">
-        
-
-        <br>
-
-        
-            
-            <input type="password" required placeholder="password" minlength="10" maxlength="20">
-        
-
-        
-            <input type="password" required placeholder=" confirm password" minlength="10" maxlength="20">
-        
-        
-
-        <br>
-        
-            
-            <input type="email" required placeholder="write a vaild Email">
-        
-        
-
-        
-        <br>
-
-        <label for="registrar"></label>
-        <select name="user " id="registrar">
-            <option value="1">user</option>
-            <option value="2">admin</option>
-
-        </select>
-
-        <br>
-        <br>
-
-        <button>Register Now</button> 
-        
+            <input type="text" required placeholder="Username" id="Username">
+            <br>
+            <input type="password" required placeholder="Password" minlength="10" maxlength="20" id="password">
+            <input type="password" onclick="check()" required placeholder="Confirm Password" minlength="10" maxlength="20" id="confirm_password">
+            <span id="error" style="color: red; visibility: hidden;">Passwords do not match!</span>
+            <br>
+            <input type="email" required placeholder="Write a valid Email" id="email">
+            <br>
+            <label for="register"></label>
+            <select name="user" id="type">
+                <option value="1">User</option>
+                <option value="2">Admin</option>
+            </select>
+            <br>
+            <br>
+            <button onclick="check()" id="submit">Register Now</button> 
         </form>
-        <P style="color: white;">already have an account ? <a href="">login now</a>
-    </body>
+        <p style="color: white;">Already have an account? <a href="login.html">Login now</a></p>
     </div>
-   </html>     
-        
+    <script src="mainUser.js"></script>  
+</body>
+</html>
