@@ -114,14 +114,6 @@ nav ul.sidebar {
     align-items: flex-start;
 }
 
-.sidebar li {
-    width: 100%;
-}
-
-.sidebar a {
-    width: 100%;
-}
-
 .overlay {
     position: absolute;
     left: 0;
