@@ -148,10 +148,3 @@ nav ul.sidebar {
     display: flex;
     border-radius: 30px;
   }
-  .image-container {
-    background-image: url(wp9167352.jpg);
-    background-size: cover; /* Resize image to fit container */
-    background-position: center; /* Center image within container */
-    width: 200px; /* Set width of the container */
-    height: 150px; /* Set height of the container */
-  }
