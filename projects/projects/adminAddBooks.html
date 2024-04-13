@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADD BOOKS Page
+        </title>
+        <link rel="stylesheet" href="/css/all.min.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="css/design.css">
+        <script src="js/script.js"></script>
+    </head>
+
+    <body>
+        <div class="overlay"></div>
+        <nav>
+            <ul>
+                <li><a href="Admin_Home.html"> ookstore</a></li>
+                <li><a href="adminAddBooks.html">Add Books</a></li>
+                <li><a href="adminEditBooks.html">Edit Books</a></li>
+                <li><a href="adminDeleteBooks.html" class="active">Delete Books</a></li>
+                <li><a href="adminSearchBooks.html">Search For Books</a></li>
+                <li><a href="login.html">Log out</a></li>
+                <li onclick="openSideBar()"><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sidebar">
+                <li><a href="Admin_Home.html">ELBTNGANA Bookstore</a></li>
+                <li><a href="adminAddBooks.html">Add Books</a></li>
+                <li><a href="adminEditBooks.html">Edit Books</a></li>
+                <li><a href="adminDeleteBooks.html" class="active">Delete Books</a></li>
+                <li><a href="adminSearchBooks.html">Search For Books</a></li>
+                <li><a href="login.html">Log out</a></li>
+                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            </ul>
+        </nav>
+
+        <div class="addContent">
+            <div>
+                <h1>Add Books</h1>
+            <h2>Add Book to Library</h2>
+            <hr>
+            <h3>Please enter Book Details</h3>
+
+            <form action="" method="post">
+                <div class="bookcover">
+                    <label for="bcvr">Book Cover:</label>
+                    <br>
+                    <input type="file" id="bcvr" accept="image/*" >
+                </div>
+                <hr>
+                <div class="bookname">
+                    <label for="bname">Book Name:</label>
+                    <input type="text" id="bname" placeholder="Please Enter Book Name" required>
+                </div>
+                <br>
+                <div class="bookid">
+                    <label for="isbn">Book Id:</label>
+                    <input type="text" id="isbn" placeholder="Please Enter ISBN" pattern="(\d{9}[\dXx])|(\d{13})" required>
+                </div>
+                <br>
+                <div class="authorname">
+                    <label for="author">Author Name:</label>
+                    <input type="text" id="author" placeholder="Please Enter author Name" required>
+                </div>
+                <br>
+                <div class="bookcategory">
+                    <label for="category">Category:</label>
+                    <select id="category" name="Genre: " required>
+                        <option value="" disabled selected > Select Category</option>
+                        <option value="1">Action and Adventure</option>
+                        <option value="2">Biography</option>
+                        <option value="3">Children's</option>
+                        <option value="4">Classic</option>
+                        <option value="5">Comic Book</option>
+                        <option value="6">Detective And Mystery</option>
+                        <option value="7">Fantasy</option>
+                        <option value="8">Historical Fiction</option>
+                        <option value="9">Horror</option>
+                        <option value="10">Humor</option>
+                        <option value="11">Literary Fiction</option>
+                        <option value="12">Romance</option>
+                        <option value="13">Sci-Fi</option>
+                        <option value="14">Short Story</option>
+                        <option value="15">Thriller</option>
+                    </select>
+                </div>
+
+                <br>
+                <div>
+                    <input type="submit"">
+                </div>
+            </form>
+            </div>
+            <div>
+                <div class="bookdescription">
+                    <label for="dscrb"><h1></h1>Enter Description:</label>
+                    <br>
+                    <textarea name="Description" id="dscrb" cols="35" rows="30" placeholder="Please Enter Description" required></textarea>
+                </div>
+            </div>
+            <div><img src="" alt=""></div>
+        </div>
+
+        
+    </body>
+</html>
