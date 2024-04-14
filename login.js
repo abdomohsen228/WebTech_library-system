@@ -1,50 +1,45 @@
 const userData = JSON.parse(localStorage.getItem('user'));
 // Now you can use userData in this file
+const adminData = JSON.parse(localStorage.getItem('admin'));
 let password2=document.getElementById("password2");
 let email2=document.getElementById("email2");
 let submit2=document.getElementById("submit2");
-function verify(email2,password2)
-{
-    for(let i=0;i<userObjects.length;i++){
-        if(email2==userObjects[i].email)
-        {
-            if(password2==userObjects[i].password)
-            {
-                c=1;
-                return true;
+console.log(userData);
+function verify(email, password) {
+    for (let i = 0; i < userData.length; i++) {
+        if (email === userData[i].email) {
+            if (password === userData[i].password) {
+                return 1; // User
             }
         }
     }
-    for(let i=0;i<adminObjects.length;i++){
-        if(email2==adminObjects[i].email)
-        {
-            if(password2==adminObjects[i].password)
-            {
-                c=2;
-                return true;
+    for (let i = 0; i < adminData.length; i++) {
+        if (email === adminData[i].email) {
+            if (password === adminData[i].password) {
+                return 2; // Admin
             }
         }
     }
-    return false;
+    return 0; // Incorrect credentials
 }
-submit2.onclick = function(event){
-    let access=verify(email2,password2);
-    if(access)
-    {
-        if(c==1)
-        {
-            window.location.href = 'User_Home.html';
-        }else{
-            window.location.href = 'Admin_Home.html';
-        }
-    }else
-    {
-        access=verify(email2,password2);
-        
-        alert('Incorrect Password,try again ');
+
+submit2.onclick = function(event) {
+    event.preventDefault();
+    let access = verify(email2.value, password2.value);
+    if (access === 1) {
+        let url = 'User_Home.html'; // Set the URL for user
+        redirect(url);
+    } else if (access === 2) {
+        let url = 'Admin_Home.html'; // Set the URL for admin
+        redirect(url);
+    } else {
+        alert('Incorrect Password, try again');
         email2.value = '';
         password2.value = '';
-        event.preventDefault();
+        event.preventDefault(); // Prevent form submission
     }
+}
 
+function redirect(url) {
+    window.location.href = url;
 }
