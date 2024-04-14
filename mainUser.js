@@ -75,6 +75,7 @@ if (localStorage.admin != null) {
 
 // Event handler for submit button
 submit.onclick = function(event) {
+    event.preventDefault();
     chosing(); // Determine the type of user
     let samePassword=check(); // Check if passwords match
     if(samePassword)
@@ -135,3 +136,4 @@ submit.onclick = function(event) {
         window.location.href = 'User_Home.html';
     }
 };
+console.log(userObjects);
