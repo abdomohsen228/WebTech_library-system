@@ -6,10 +6,14 @@
     <meta name="description" content="This is our book store" />
     <style>
         body {
-            background-color: #120069;
+            background-image: url(imgs/ryunosuke-kikuno-FKqxZ58bVjU-unsplash.jpg);
+            background-size: cover;
+
+            
         }
         .container {
-            width: 300px;
+            width: 500px;
+            height: 45vh;
             margin-right: auto;
             margin-left: auto;
             margin-top: 150px;
@@ -20,6 +24,8 @@
             text-align: center;
             padding: 15px;
             border-radius: 4ch;
+            box-shadow: 4px 3px 1px 4px rgba(0, 0, 0, 1);
+
             background-image: linear-gradient(270deg, #0f4392, #001d3d, #001d3d);
         }
         input, button, select {
@@ -51,7 +57,7 @@
 <body> 
     <div class="container">
         <h1 style="color: white;">REGISTER NOW</h1>
-        <form>
+        <form >
             <input type="text" required placeholder="Username" id="Username">
             <br>
             <input type="password" required placeholder="Password" minlength="10" maxlength="20" id="password">
