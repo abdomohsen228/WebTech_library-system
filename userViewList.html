@@ -1,434 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="../css/all.min.css">
-        <link rel="stylesheet" href="userViweListStyle.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Book Library</title>
+        <meta name="title" content="Online Book Library">
+        <meta name="description" content="Online Book Library">
+    
+    
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+    
+        <link rel="stylesheet" href="userSearch.css">
         
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>List user</title>
     </head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="imgs\Icon.png" width="190" height="28" alt="Online">
+            </a>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="User_Home.html" class="navbar-link label-medium active">Home</a>
+                    </li>
+                    <li>
+                        <a href="userSearchBooks.html" class="navbar-link label-medium active">Search</a>
+                    </li>
+                    <li>
+                        <a href="userViewList.html" class="navbar-link label-medium active">View List</a>
+                    </li>
+                    <li>
+                        <a href="userSelectBook.html" class="navbar-link label-medium active">Select a book</a>
+                    </li>
+                    <li>
+                        <a href="userBorrowBook.html" class="navbar-link label-medium active">Borrow Books</a>
+                    </li>
+                    <li>
+                        <a href="userBookList.html" class="navbar-link label-medium active">Your Book</a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="navbar-link label-medium active">Log Out</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="nav-toggle-btn icon-btn" aria-label="toggle navbar" type="button" data-nav-toggler>
+                <span class="material-symbols-rounded open" aria-hidden="true">menu</span>
+                <span class="material-symbols-rounded close" aria-hidden="true">close</span>
+            </button>
+        </div>
+    </header>
+<!-- main content -->
+<main class="mainmain">
+    <article>
+        <section class="hero">
+            <div class="container">
 
+                <div class="hero-content">
+                    <h1 class="headline-large hero-title">Find a Book where you can be yourself.</h1>
+                    <p class="body-large hero-text">
+                        If you're looking for a book where you can be yourself, don't give up. Keep searching until you find a place that feels like home.
 
-    <body>
-            <header>    
-                <div class="container">
-                    <a href="#" class="logo">
-                        <img decoding="async" src="imgs/Icon.png" alt="Logo" />
-                    </a>
-                    <nav>
-                        <i class="fas fa-bars toggle-menu"></i>
-                    <ul>
-                        <li><a class="active" href="User_Home.html">Home</a></li>
-                        <li><a href="userSearchBooks.html">Search</a></li>
-                        <li><a href="userViewList.html">View List</a></li>
-                        <li><a href="userSelectBook.html">Select a book</a></li>
-                        <li><a href="userBorrowBook.html">Borrow Books</a></li>
-                        <li><a href="userBookList.html">Your Book</a></li>
-                        <li><a href="login.html">Log out</a></li>
-                    </ul>
-                    </nav>
+                    </p>
+                    <form  method="get" class="search-bar">
+                        <label class="search-item">
+                            <span class="label-medium label">Book</span>
+                            <input type="text" name="location" id="searchInput" placeholder="title,author..." class="search-item-field body-medium" onkeyup="searchDate(this.value)">
+                        </label>
+                        <button type="submit"  id="searchTitle" class="search-btn">
+                            <span class="material-symbols-rounded" aria-hidden="true">search</span>
+                            <span class="label-medium">Search</span>
+                        </button>
+                    </form>
                 </div>
-            </header>
-            <h1 class="add">Your List</h1>
-        <div class="outputs">
-            <div class="searchBlock">
-                <table class="dash">
-                    <tr>
-                        <th>Id</th>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>History of borrowing</th>
-                        <th>Category</th>
-                        <th>Delete</th>
-                    </tr>
-                    <tbody id="tbody">
-                        <tr>
-                            <td>1</td>
-                            <td>The Book Thief</td>
-                            <td>Markus Zusak</td>
-                            <td>22/8/2023</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Memoirs of a Geisha</td>
-                            <td>Arthur Golden</td>
-                            <td>12/10/2023</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>All the Light We Cannot See</td>
-                            <td>Anthony Doerr</td>
-                            <td>15/10/2023</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Outlander</td>
-                            <td>Diana Gabaldon</td>
-                            <td>15/11/2023</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                                                <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>                        <tr>
-                            <td>5</td>
-                            <td>The Red Tent</td>
-                            <td>Anita Diamant</td>
-                            <td>1/1/2024</td>
-                            <td>historic</td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
-        </div> 
-        
-    </body>
+        </section>
 
-</html>
+        <section class="section property" aria-labelledby="Property-label">
+            <div class="container">
+                <div id="card-container" class="property-list">
+                        <!-- <div class="card">
+                            <div class="card-banner">
+                                <figure class="img-holder" style="--width:250; --height:300;">
+                                    <img src="imgs/images.jpg" width="250" height="300" alt="Dear Life" class="img-cover">
+                                </figure>
+                                <button class="icon-btn fav-btn " aria-label="add to favorite">
+                                    <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <span class="author">Rachel Clarke</span>
+                                <h3 class="title-small card-title">
+                                    <a href="#" class="title-small card-title">Dear Life</a>
+                                </h3>
+                                <address class="body-medium card-text">
+                                    
+                                    "Dear Life" offers a poignant exploration of human experience through a collection of short stories, delving into themes of love, loss, and resilience, all while reflecting on the complexities of existence and the passage of time. Alice Munro's masterful storytelling invites readers into the intimate lives of her characters, weaving together narratives that resonate with profound emotional depth and universal truths.
+                                </address>
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+
+
+
+        
+        </section>
+    </article>
+</main>
+
+
+
+
+<!-- footer -->
+
+        <script src="searchingOpertaions.js"></script> 
