@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/all.min.css">
-    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="borrowBook.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,28 +15,28 @@
 </head>
 <body>
 <div class="body-color">
+                    
     <header>    
         <div class="container">
             <a href="#" class="logo">
-                <img decoding="async" src="imgs/Icon.png" alt="Logo" />
+                <img style="width: 200px; height: 100px;" decoding="async" src="/amino.png" alt="Logo" />
             </a>
             <nav>
                 <i class="fas fa-bars toggle-menu"></i>
-                <ul>
-                    <li><a class="active" href="User_Home.html">Home</a></li>
-                    <li><a href="userSearchBooks.html">Search</a></li>
+            <ul>
+                <li><a class="active" href="User_Home.html">Home</a></li>
+                <li><a href="userSearchBooks.html">Search</a></li>
                 <li><a href="userViewList.html">View List</a></li>
-                <li><a href="userSelectBook.html">Select a book</a></li>
                 <li><a href="userBorrowBook.html">Borrow Books</a></li>
                 <li><a href="userBookList.html">Your Book</a></li>
-                <li><a href="../register/login.html">Log out</a></li>
+                <li><a href="login.html">Log out</a></li>
             </ul>
             <div class="form">
                 <i class="fas fa-search"></i>
             </div>
-        </nav>
-    </div>
-</header>
+            </nav>
+        </div>
+    </header>
 <div class="overlay"></div>
 
 <div class="content-all">
@@ -44,7 +44,7 @@
 <br>
     <div class="borrow">
         <label for="borrow">Boook name:  </label>
-        <select style="border: 1px double   black;" name="borrow" id="borrow" required>
+        <select  style="border: 1px double   black;" name="borrow" id="borrow" required>
         <option value="" disabled selected> Select </option>
         <option value="1">YellowFace</option>
         <option value="2">Cut  (unavailable)</option>
@@ -56,15 +56,41 @@
 <br>
 <br>
 <form action="">
-    <div>
-        <input style=" left: 50%; transform: translate(-50%); position: relative; border-radius: 8px; border: 1px solid rgb(17, 12, 61); width: fit-content;" type="submit" value="submit">
+    <div class="borrow-btn">
+        <input  style=" left: 50%; transform: translate(-50%); position: relative; border-radius: 8px; border: 1px solid rgb(17, 12, 61); width: fit-content;" type="submit" value="Borrow">
     </div>
 </form>
-
-    <hr>
+<br>
+<br>
+<br>
+<br>
+    
     <center>    <h2> <FONT COLOR="RED"> --WARNING--  </FONT></h2>
+        <br>
+        <br>
+        <br>
         <h3> unavailable books can not be borrowed</h3></center>
     </div>
 </div>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a>            <div class="contact-info">
+                    <p>Email: </p>
+                    <p>Phone: </p>
+                    <p>Address: </p>
+                    <p>Social Media:</p>
+                    <p>Twitter: </p>
+                    <p>Facebook: </p>
+                    <p>Instagram: </p>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </footer>
 </body>
 </html>
