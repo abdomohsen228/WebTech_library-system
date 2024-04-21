@@ -4,79 +4,76 @@
     <meta charset="utf-8"/>
     <title>book store</title>
     <meta name="description" content="This is our book store" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
-        body {
-            background-image: url(imgs/ryunosuke-kikuno-FKqxZ58bVjU-unsplash.jpg);
-            background-size: cover;
-
-            
-        }
-        .container {
-            width: 500px;
-            height: 45vh;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 150px;
-            background-color: white;
-            border-width: 1px;
-            border-color: #d4d4d4;
-            border-style: solid;
-            text-align: center;
-            padding: 15px;
-            border-radius: 4ch;
-            box-shadow: 4px 3px 1px 4px rgba(0, 0, 0, 1);
-
-            background-image: linear-gradient(270deg, #0f4392, #001d3d, #001d3d);
-        }
-        input, button, select {
-            margin: 5px;
-            padding: 5px;
-        }
-        input, select {
-            background-color: #efefef;
-            border-color: #efefef;
-            color: rgb(128, 128green, 128blue);
-        }
-        input {
-            width: 90%;
-        }
-        select {
-            width: 94%;
-        }
-        button {
-            background-color: rgb(204, 153, 154);
-            color: black;
-            width: 94%;
-        }
-        a {
-            text-decoration: none;
-            color: #7f7f7f;
-        }
-    </style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cairo:wght@300;400;700&family=Open+Sans:wght@400;700&display=swap');
+</style>
 </head>
 <body> 
-    <div class="container">
-        <h1 style="color: white;">REGISTER NOW</h1>
+
+
+    <header>    
+        <div class="container">
+            <a href="#" class="logo">
+                <img  style="width: 200px; height: 100px;" decoding="async" src="/amino.png" alt="Logo" />
+            </a>
+            <nav>
+                <i class="fas fa-bars toggle-menu"></i>
+                <ul>
+                    <li><a class="active" href="User_Home.html">Home</a></li>
+                    <li><a href="userSearchBooks.html">Search</a></li>
+                    <li><a href="userViewList.html">View List</a></li>
+                    <li><a href="userBorrowBook.html">Borrow Books</a></li>
+                    <li><a href="userBookList.html">Your Book</a></li>
+                    <li><a href="login.html">Log out</a></li>
+                </ul>
+                <div class="form">
+                    <i class="fas fa-search"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="signup-style">
+        <h1>REGISTER NOW</h1>
         <form >
             <input type="text" required placeholder="Username" id="Username">
-            <br>
             <input type="password" required placeholder="Password" minlength="10" maxlength="20" id="password">
             <input type="password" onclick="check()" required placeholder="Confirm Password" minlength="10" maxlength="20" id="confirm_password">
             <span id="error" style="color: red; visibility: hidden;">Passwords do not match!</span>
-            <br>
+            
             <input type="email" required placeholder="Write a valid Email" id="email">
-            <br>
+            
             <label for="register"></label>
             <select name="user" id="type">
                 <option value="1">User</option>
                 <option value="2">Admin</option>
             </select>
-            <br>
-            <br>
+            
             <button onclick="check()" id="submit">Register Now</button> 
         </form>
-        <p style="color: white;">Already have an account? <a href="login.html">Login now</a></p>
+        <p >Already have an account? <a  href="login.html">Login now</a></p>
     </div>
-    <script src="mainUser.js"></script>  
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Your Website. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a>            <div class="contact-info">
+                        <p>Email: </p>
+                        <p>Phone: </p>
+                        <p>Address: </p>
+                        <p>Social Media:</p>
+                        <p>Twitter: </p>
+                        <p>Facebook: </p>
+                        <p>Instagram: </p>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </footer>
 </body>
 </html>
